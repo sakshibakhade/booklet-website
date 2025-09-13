@@ -1,0 +1,74 @@
+
+  
+  /* ========== Mobile Styles (max width: 480px) ========== */
+@media (max-width: 480px) {
+
+  /* General adjustments */
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .header-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .heading h1 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .heading a.btn {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  /* Features / stock cards stack vertically */
+  .features,
+  .stock-container ul,
+  .reviews {
+    display: block;
+  }
+
+  .features .box,
+  .stock-container li,
+  .reviews .col {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  /* Images should shrink automatically */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Contact form full width */
+  .form-section form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  input.fill,
+  textarea.fill-feedback,
+  select.fill {
+    width: 100%;
+  }
+
+  /* Footer columns stack */
+  .footer-container {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-col {
+    margin-bottom: 20px;
+  }
+}
