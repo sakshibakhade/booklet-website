@@ -1,74 +1,460 @@
 
-  
-  /* ========== Mobile Styles (max width: 480px) ========== */
-@media (max-width: 480px) {
 
-  /* General adjustments */
-  body {
-    font-size: 14px;
-    line-height: 1.4;
-  }
+@media only screen and (max-width: 480px) {
 
-  .header-section {
-    padding: 20px;
-    text-align: center;
-  }
+    /* --- General Reset & Body Adjustments --- */
+    body {
+        font-size: 14px; /* Base font size for mobile */
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
 
-  .nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
 
-  .heading h1 {
-    font-size: 22px;
-    line-height: 1.3;
-  }
+    .col,
+    .span_1_of_2, .span_1_of_3, .span_1_of_4, /* ... and so on for all your col classes */
+    .span_2_of_2, .span_3_of_3, .span_4_of_4 {
+        width: 100% !important; /* Force full width */
+        margin: 0 !important; /* Remove any existing margins */
+        padding: 0 1rem !important; /* Add consistent padding for content */
+        float: none !important; /* Prevent floating */
+        clear: both; /* Clear any floats */
+    }
 
-  .heading a.btn {
-    display: block;
-    margin: 10px auto;
-    width: 90%;
-  }
+    /* --- Header & Navigation --- */
+    .header-section {
+        height: auto; /* Auto height to fit content */
+        padding-bottom: 3rem; /* Add padding at the bottom */
+        background-position: 80% center; /* Adjust background image position */
+    }
 
-  /* Features / stock cards stack vertically */
-  .features,
-  .stock-container ul,
-  .reviews {
-    display: block;
-  }
+    .nav {
+        flex-direction: column; /* Stack logo/title and links */
+        align-items: center; /* Center items horizontally */
+        padding: 1rem 0;
+    }
 
-  .features .box,
-  .stock-container li,
-  .reviews .col {
-    width: 100% !important;
-    margin-bottom: 20px;
-  }
+    .nav img {
+        position: static; /* Remove absolute positioning */
+        float: none; /* Remove float */
+        margin: 1rem auto; /* Center logos */
+        height: 60px;
+        width: 60px;
+    }
 
-  /* Images should shrink automatically */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+    .nav .image {
+        margin-top: 0.5rem; /* Adjust margin for title image */
+        height: 20px;
+        width: 80px;
+    }
 
-  /* Contact form full width */
-  .form-section form {
-    width: 100%;
-    padding: 10px;
-  }
+    .links {
+        display: none; /* Hide desktop navigation for mobile */
+        /* You would typically implement a "hamburger menu" here with JavaScript */
+    }
 
-  input.fill,
-  textarea.fill-feedback,
-  select.fill {
-    width: 100%;
-  }
+    .heading {
+        position: static; /* Remove absolute positioning */
+        text-align: center;
+        padding: 2rem 1rem 0; /* Adjust padding */
+        left: auto; /* Remove left property */
+        top: auto; /* Remove top property */
+    }
 
-  /* Footer columns stack */
-  .footer-container {
-    display: block;
-    text-align: center;
-  }
+    .heading h1 {
+        font-size: 1.8rem; /* Smaller font size for mobile heading */
+        word-spacing: 0.5rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.3;
+        margin-bottom: 1.5rem;
+    }
 
-  .footer-col {
-    margin-bottom: 20px;
-  }
+    .btn:link,
+    .btn:visited {
+        display: block; /* Make buttons stack */
+        margin: 1rem auto; /* Center buttons */
+        width: 80%; /* Make them take up more width */
+        max-width: 250px; /* Limit their max width */
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .btn-secondary:link, .btn-secondary:visited {
+        border: 1px solid #BBFBFF; /* Use brighter color for border for better visibility */
+        color: #BBFBFF;
+    }
+
+    /* --- Feature Section --- */
+    .heading-of-feature {
+        padding: 1.5rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .heading-of-feature h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .heading-of-feature h2:after {
+        width: 80px;
+        margin-top: 1rem;
+    }
+
+    .heading-of-feature p {
+        padding: 0 0.5rem; /* Adjust padding */
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .features {
+        flex-direction: column; /* Stack features vertically */
+        padding: 1rem 0; /* Adjust padding */
+        background-color: #fff; /* Ensure white background for features */
+    }
+
+    .features .box {
+        margin-bottom: 2rem; /* Space between stacked boxes */
+        padding: 1.5rem 1rem;
+        text-align: center; /* Center text within boxes */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow */
+        border-radius: 8px;
+        max-width: 90%; /* Limit width of individual boxes */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .features .box:last-child {
+        margin-bottom: 0;
+    }
+
+    .features h1 {
+        font-size: 1.4rem;
+        padding: 0.5rem 0;
+    }
+
+    .features p {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 100%; /* Allow paragraph to take full width of box */
+        margin: 0 auto; /* Center if shorter than box */
+    }
+
+    .icon {
+        position: static; /* Remove absolute positioning */
+        margin: 0 auto 0.5rem; /* Center icon */
+        display: block;
+        font-size: 2rem;
+    }
+
+    /* --- How It Works Section --- */
+    .heading-of-steps {
+        padding: 2rem 1rem;
+    }
+
+    .heading-of-steps h2 {
+        font-size: 2rem;
+    }
+
+    .heading-of-steps p {
+        font-size: 1.2rem;
+    }
+
+    .steps-container {
+        flex-direction: column; /* Stack image and steps vertically */
+        padding: 1rem 0;
+    }
+
+    .row img {
+        width: 90%; /* Scale image down */
+        height: auto;
+        margin: 0 auto 2rem; /* Center image and add bottom margin */
+        display: block;
+    }
+
+    .step-box {
+        width: 100%; /* Ensure step box takes full width */
+        padding: 0 1rem;
+    }
+
+    .working-steps {
+        padding: 1rem 0;
+        text-align: center; /* Center text */
+    }
+
+    .working-steps p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 100%;
+        margin: 0 auto; /* Center text */
+    }
+
+    .working-steps div {
+        font-size: 1.8rem;
+        margin: 1rem auto 0.5rem; /* Center number */
+        width: fit-content; /* Make div fit content to center */
+    }
+
+    .playbuttons img {
+        width: 80%; /* Scale down play buttons image */
+        max-width: 300px;
+        display: block;
+        margin: 1rem auto; /* Center it */
+    }
+
+    /* --- Stock Section --- */
+    .stock-section {
+        margin-top: 3rem;
+    }
+
+    .heading-of-stock h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .heading-of-stock p {
+        padding: 0 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .stock-container {
+        padding: 2rem 1rem;
+    }
+
+    .stock-container ul {
+        flex-direction: column; /* Stack book items vertically */
+        height: auto; /* Auto height for stacked items */
+        gap: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .stock-container li {
+        max-width: 90%; /* Limit width for individual book cards */
+        margin: 0 auto; /* Center them */
+        padding: 1.5rem 1rem;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Consistent shadow */
+        border-radius: 12px;
+    }
+    .stock-container .img img {
+        width: 180px; /* Smaller image size */
+        height: 280px;
+        transform: scale(1); /* No scaling on hover for mobile */
+        opacity: 1; /* Always full opacity */
+        margin-top: 1rem;
+    }
+     .stock-container .img img:hover{ /* Remove hover effect for mobile */
+        transform: scale(1);
+        opacity: 1;
+    }
+
+
+    .stock-container h3 {
+        font-size: 1.1rem;
+        margin: 0.8rem 0 0.5rem;
+    }
+
+    .stock-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+     .stock-btn:hover{ /* Remove hover effect for mobile */
+        background-color: var(--secondary-color);
+        transform: translateY(0);
+    }
+
+    /* --- Review Section --- */
+    .review-section {
+        height: auto; /* Auto height to fit content */
+        padding-bottom: 2rem;
+        background-position: center;
+    }
+
+    .review-heading h2 {
+        font-size: 2rem;
+        top: 2rem;
+        padding-bottom: 2rem; /* Add padding for spacing */
+    }
+
+    .reviews {
+        grid-template-columns: 1fr; /* Stack reviews vertically */
+        padding: 0 1rem;
+        margin-top: 0;
+    }
+
+    .reviews .col {
+        margin-bottom: 2rem; /* Space between stacked reviews */
+        text-align: center; /* Center text within reviews */
+        max-width: 90%; /* Limit width of individual reviews */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    blockquote {
+        max-width: 100%; /* Allow blockquote to take full width */
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        padding: 0 1rem; /* Add padding inside blockquote */
+    }
+
+    cite img {
+        height: 6rem;
+        width: 6rem;
+        margin-top: 0.5rem;
+    }
+    cite h4 {
+        margin-left: 0; /* Reset margin */
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    /* --- Sign Up Section --- */
+    .sign-up-heading h2 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .plans-container {
+        flex-direction: column; /* Stack plans vertically */
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .plans-section {
+        width: 90%; /* Take more width on mobile */
+        max-width: 320px; /* Limit max width */
+        margin: 0 auto; /* Center plans */
+        padding: 1.5rem 2rem;
+        height: auto; /* Auto height */
+    }
+     .plans-section:hover { /* Remove hover effect for mobile */
+        transform: translateY(0);
+    }
+
+
+    .plans-section h3 {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .price {
+        font-size: 18px;
+        padding: 0.8rem 0;
+    }
+
+    .provides ul {
+        padding: 0.8rem 0;
+    }
+
+    .provides li {
+        font-size: 1.1rem;
+        padding: 0.3rem 0;
+    }
+
+    .sign-up-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+    }
+     .sign-up-btn:hover{ /* Remove hover effect for mobile */
+        transform: translateY(0);
+        background-color: var(--secondary-color);
+    }
+
+
+    /* --- Contact Section --- */
+    .contact-section h2 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .form-section {
+        margin-top: 2rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .contact-list {
+        padding: 0.8rem 0;
+        font-size: 1.1rem;
+        text-align: left; /* Align labels left */
+        padding-left: 1rem; /* Indent labels */
+    }
+
+    .fill,
+    .fill-feedback {
+        width: calc(100% - 2rem); /* Adjust width to fit padding */
+        padding: 0.6rem;
+        font-size: 0.9rem;
+        margin-left: 1rem; /* Center input fields */
+        margin-right: 1rem;
+    }
+    select.fill {
+        -webkit-appearance: none; /* Remove default arrow on iOS */
+        -moz-appearance: none; /* Remove default arrow on Firefox */
+        appearance: none; /* Remove default arrow */
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-6.4H18.8c-5%200-9.3%201.8-13.2%206.4-3.9%204.6-6.4%2010.5-6.4%2016.9v65.4c0%206.4%202.5%2012.3%206.4%2016.9%203.9%204.6%208.2%206.4%2013.2%206.4h255c5%200%209.3-1.8%2013.2-6.4%203.9-4.6%206.4-10.5%206.4-16.9V86.3c0-6.4-2.5-12.3-6.4-16.9z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+        background-repeat: no-repeat;
+        background-position: right 0.7em top 50%, 0 0;
+        background-size: 0.65em auto, 100%;
+        padding-right: 2.5em; /* Make space for the arrow */
+    }
+
+
+    .form-btn {
+        margin-top: 1.5rem;
+        padding: 0.6rem 1.5rem;
+        font-size: 1.1rem;
+        width: calc(100% - 2rem); /* Adjust width */
+        margin-left: 1rem; /* Center button */
+    }
+     .form-btn:hover{ /* Remove hover effect for mobile */
+        background-color: var(--secondary-color);
+        color: inherit; /* Keep original color */
+        transform: translateY(0);
+    }
+
+
+    /* --- Footer --- */
+    .footer-container {
+        flex-direction: column; /* Stack footer columns */
+        align-items: center; /* Center footer content */
+    }
+
+    .footer-col {
+        margin: 1rem 0; /* Space between stacked columns */
+        text-align: center; /* Center text */
+        flex: 1 1 100%; /* Take full width */
+    }
+
+    .footer-col h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        display: inline-block; /* Keep underline centered */
+    }
+
+    .footer-col ul {
+        padding: 0;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 8px;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+
+    .social-links a {
+        font-size: 18px;
+        margin: 0 8px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        margin-top: 15px;
+        padding-top: 8px;
+    }
 }
