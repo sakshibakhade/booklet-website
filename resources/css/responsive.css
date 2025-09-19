@@ -112,6 +112,8 @@
         padding: 1rem 0; /* Adjust padding */
         background-color: #fff; /* Ensure white background for features */
         margin: 1rem 5rem;
+        border-radius: 2px;
+        gap: 2rem;
     }
 
     .features .box {
