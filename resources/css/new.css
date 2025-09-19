@@ -18,7 +18,7 @@
   background-color: #ff4c4c;
 }
 
-.heading h1{
+.stock-heading h1{
    text-align: center;
    font-size: 3rem;
    font-weight: 100;
@@ -26,17 +26,17 @@
    text-transform: uppercase;
    color: orangered;
 }
-.heading p{
+.stock-heading p{
    text-align: center;
    font-size: 1.5rem;
    color: rgb(75, 74, 74);
    text-transform:capitalize;
 }
- .stock-container{
+ .stock-contain{
    margin-bottom: 5rem;
  
  }
-.stock-container ul {
+.stock-contain ul {
     display: flex;
     justify-content: center;
    gap: 3rem;
@@ -44,11 +44,11 @@
     list-style: none;
     height: 450px;
 }
-.stock{
+.book-stock{
    padding:6rem 2rem;
 }
 
-.stock-container li {
+.stock-contain li {
     background: #fff;
     padding: 0 1rem;
     max-width:350px;
@@ -56,14 +56,14 @@
   border-radius: 4%;
 } 
 
- .stock-container img{
+ .stock-contain img{
     height: 300px;
     width: 300px;
     opacity: 0.8;
     transform: scale(1.13);
 
 }
- .stock-container  img:hover{
+ .stock-contain  img:hover{
   opacity: 1;
     transform: scale(1.05);
 }
@@ -74,18 +74,18 @@
   align-items: center; 
   text-align: center;
 }
- .stock-container h3{
+ .stock-contain h3{
     font-size: 1.5rem;
     text-transform: uppercase;
       color:orangered;
  }
- .stock-container span{
+ .stock-contain span{
     font-size: 1.5rem;
     color: orangered;
     font-weight: bold;
     margin-bottom: 1rem;
    }
-    .stock-container h2{
+    .stock-contain h2{
     color: rgb(78, 75, 75);
     }
    

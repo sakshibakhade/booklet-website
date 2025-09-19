@@ -1,460 +1,220 @@
-
-
-@media only screen and (max-width: 480px) {
-
-    /* --- General Reset & Body Adjustments --- */
-    body {
-        font-size: 14px; /* Base font size for mobile */
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-    }
-
-
-    .col,
-    .span_1_of_2, .span_1_of_3, .span_1_of_4, /* ... and so on for all your col classes */
-    .span_2_of_2, .span_3_of_3, .span_4_of_4 {
-        width: 100% !important; /* Force full width */
-        margin: 0 !important; /* Remove any existing margins */
-        padding: 0 1rem !important; /* Add consistent padding for content */
-        float: none !important; /* Prevent floating */
-        clear: both; /* Clear any floats */
-    }
-
-    /* --- Header & Navigation --- */
-    .header-section {
-        height: auto; /* Auto height to fit content */
-        padding-bottom: 3rem; /* Add padding at the bottom */
-        background-position: 80% center; /* Adjust background image position */
-    }
-
-    .nav {
-        flex-direction: column; /* Stack logo/title and links */
-        align-items: center; /* Center items horizontally */
-        padding: 1rem 0;
-    }
-
-    .nav img {
-        position: static; /* Remove absolute positioning */
-        float: none; /* Remove float */
-        margin: 1rem auto; /* Center logos */
-        height: 60px;
-        width: 60px;
-    }
-
-    .nav .image {
-        margin-top: 0.5rem; /* Adjust margin for title image */
-        height: 20px;
-        width: 80px;
-    }
-
-    .links {
-        display: none; /* Hide desktop navigation for mobile */
-        /* You would typically implement a "hamburger menu" here with JavaScript */
-    }
-
-    .heading {
-        position: static; /* Remove absolute positioning */
-        text-align: center;
-        padding: 2rem 1rem 0; /* Adjust padding */
-        left: auto; /* Remove left property */
-        top: auto; /* Remove top property */
-    }
-
-    .heading h1 {
-        font-size: 1.8rem; /* Smaller font size for mobile heading */
-        word-spacing: 0.5rem;
-        letter-spacing: 0.1rem;
-        line-height: 1.3;
-        margin-bottom: 1.5rem;
-    }
-
-    .btn:link,
-    .btn:visited {
-        display: block; /* Make buttons stack */
-        margin: 1rem auto; /* Center buttons */
-        width: 80%; /* Make them take up more width */
-        max-width: 250px; /* Limit their max width */
-        font-size: 0.9rem;
-        padding: 0.8rem 1.5rem;
-    }
-
-    .btn-secondary:link, .btn-secondary:visited {
-        border: 1px solid #BBFBFF; /* Use brighter color for border for better visibility */
-        color: #BBFBFF;
-    }
-
-    /* --- Feature Section --- */
-    .heading-of-feature {
-        padding: 1.5rem 1rem;
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .heading-of-feature h2 {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
-    .heading-of-feature h2:after {
-        width: 80px;
-        margin-top: 1rem;
-    }
-
-    .heading-of-feature p {
-        padding: 0 0.5rem; /* Adjust padding */
-        font-size: 1.2rem;
-        margin-top: 1rem;
-    }
-
-    .features {
-        flex-direction: column; /* Stack features vertically */
-        padding: 1rem 0; /* Adjust padding */
-        background-color: #fff; /* Ensure white background for features */
-    }
-
-    .features .box {
-        margin-bottom: 2rem; /* Space between stacked boxes */
-        padding: 1.5rem 1rem;
-        text-align: center; /* Center text within boxes */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add subtle shadow */
-        border-radius: 8px;
-        max-width: 90%; /* Limit width of individual boxes */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .features .box:last-child {
-        margin-bottom: 0;
-    }
-
-    .features h1 {
-        font-size: 1.4rem;
-        padding: 0.5rem 0;
-    }
-
-    .features p {
-        font-size: 1rem;
-        line-height: 1.5;
-        max-width: 100%; /* Allow paragraph to take full width of box */
-        margin: 0 auto; /* Center if shorter than box */
-    }
-
-    .icon {
-        position: static; /* Remove absolute positioning */
-        margin: 0 auto 0.5rem; /* Center icon */
-        display: block;
-        font-size: 2rem;
-    }
-
-    /* --- How It Works Section --- */
-    .heading-of-steps {
-        padding: 2rem 1rem;
-    }
-
-    .heading-of-steps h2 {
-        font-size: 2rem;
-    }
-
-    .heading-of-steps p {
-        font-size: 1.2rem;
-    }
-
-    .steps-container {
-        flex-direction: column; /* Stack image and steps vertically */
-        padding: 1rem 0;
-    }
-
-    .row img {
-        width: 90%; /* Scale image down */
-        height: auto;
-        margin: 0 auto 2rem; /* Center image and add bottom margin */
-        display: block;
-    }
-
-    .step-box {
-        width: 100%; /* Ensure step box takes full width */
-        padding: 0 1rem;
-    }
-
-    .working-steps {
-        padding: 1rem 0;
-        text-align: center; /* Center text */
-    }
-
-    .working-steps p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        max-width: 100%;
-        margin: 0 auto; /* Center text */
-    }
-
-    .working-steps div {
-        font-size: 1.8rem;
-        margin: 1rem auto 0.5rem; /* Center number */
-        width: fit-content; /* Make div fit content to center */
-    }
-
-    .playbuttons img {
-        width: 80%; /* Scale down play buttons image */
-        max-width: 300px;
-        display: block;
-        margin: 1rem auto; /* Center it */
-    }
-
-    /* --- Stock Section --- */
-    .stock-section {
-        margin-top: 3rem;
-    }
-
-    .heading-of-stock h2 {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
-    .heading-of-stock p {
-        padding: 0 0.5rem;
-        font-size: 1.2rem;
-    }
-
-    .stock-container {
-        padding: 2rem 1rem;
-    }
-
-    .stock-container ul {
-        flex-direction: column; /* Stack book items vertically */
-        height: auto; /* Auto height for stacked items */
-        gap: 1.5rem;
-        margin: 1rem 0;
-    }
-
-    .stock-container li {
-        max-width: 90%; /* Limit width for individual book cards */
-        margin: 0 auto; /* Center them */
-        padding: 1.5rem 1rem;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Consistent shadow */
-        border-radius: 12px;
-    }
-    .stock-container .img img {
-        width: 180px; /* Smaller image size */
-        height: 280px;
-        transform: scale(1); /* No scaling on hover for mobile */
-        opacity: 1; /* Always full opacity */
-        margin-top: 1rem;
-    }
-     .stock-container .img img:hover{ /* Remove hover effect for mobile */
-        transform: scale(1);
-        opacity: 1;
-    }
-
-
-    .stock-container h3 {
-        font-size: 1.1rem;
-        margin: 0.8rem 0 0.5rem;
-    }
-
-    .stock-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 1rem;
-        margin-top: 1rem;
-    }
-     .stock-btn:hover{ /* Remove hover effect for mobile */
-        background-color: var(--secondary-color);
-        transform: translateY(0);
-    }
-
-    /* --- Review Section --- */
-    .review-section {
-        height: auto; /* Auto height to fit content */
-        padding-bottom: 2rem;
-        background-position: center;
-    }
-
-    .review-heading h2 {
-        font-size: 2rem;
-        top: 2rem;
-        padding-bottom: 2rem; /* Add padding for spacing */
-    }
-
-    .reviews {
-        grid-template-columns: 1fr; /* Stack reviews vertically */
-        padding: 0 1rem;
-        margin-top: 0;
-    }
-
-    .reviews .col {
-        margin-bottom: 2rem; /* Space between stacked reviews */
-        text-align: center; /* Center text within reviews */
-        max-width: 90%; /* Limit width of individual reviews */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    blockquote {
-        max-width: 100%; /* Allow blockquote to take full width */
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-        padding: 0 1rem; /* Add padding inside blockquote */
-    }
-
-    cite img {
-        height: 6rem;
-        width: 6rem;
-        margin-top: 0.5rem;
-    }
-    cite h4 {
-        margin-left: 0; /* Reset margin */
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-        font-size: 1.1rem;
-    }
-
-    /* --- Sign Up Section --- */
-    .sign-up-heading h2 {
-        font-size: 2rem;
-        margin-top: 2rem;
-    }
-
-    .plans-container {
-        flex-direction: column; /* Stack plans vertically */
-        gap: 1.5rem;
-        margin-top: 1.5rem;
-    }
-
-    .plans-section {
-        width: 90%; /* Take more width on mobile */
-        max-width: 320px; /* Limit max width */
-        margin: 0 auto; /* Center plans */
-        padding: 1.5rem 2rem;
-        height: auto; /* Auto height */
-    }
-     .plans-section:hover { /* Remove hover effect for mobile */
-        transform: translateY(0);
-    }
-
-
-    .plans-section h3 {
-        font-size: 1.5rem;
-        margin-top: 0.5rem;
-    }
-
-    .price {
-        font-size: 18px;
-        padding: 0.8rem 0;
-    }
-
-    .provides ul {
-        padding: 0.8rem 0;
-    }
-
-    .provides li {
-        font-size: 1.1rem;
-        padding: 0.3rem 0;
-    }
-
-    .sign-up-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-        margin-top: 1.5rem;
-    }
-     .sign-up-btn:hover{ /* Remove hover effect for mobile */
-        transform: translateY(0);
-        background-color: var(--secondary-color);
-    }
-
-
-    /* --- Contact Section --- */
-    .contact-section h2 {
-        font-size: 2rem;
-        margin-top: 2rem;
-    }
-
-    .form-section {
-        margin-top: 2rem;
-        padding: 0.5rem 0.5rem;
-    }
-
-    .contact-list {
-        padding: 0.8rem 0;
-        font-size: 1.1rem;
-        text-align: left; /* Align labels left */
-        padding-left: 1rem; /* Indent labels */
-    }
-
-    .fill,
-    .fill-feedback {
-        width: calc(100% - 2rem); /* Adjust width to fit padding */
-        padding: 0.6rem;
-        font-size: 0.9rem;
-        margin-left: 1rem; /* Center input fields */
-        margin-right: 1rem;
-    }
-    select.fill {
-        -webkit-appearance: none; /* Remove default arrow on iOS */
-        -moz-appearance: none; /* Remove default arrow on Firefox */
-        appearance: none; /* Remove default arrow */
-        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-6.4H18.8c-5%200-9.3%201.8-13.2%206.4-3.9%204.6-6.4%2010.5-6.4%2016.9v65.4c0%206.4%202.5%2012.3%206.4%2016.9%203.9%204.6%208.2%206.4%2013.2%206.4h255c5%200%209.3-1.8%2013.2-6.4%203.9-4.6%206.4-10.5%206.4-16.9V86.3c0-6.4-2.5-12.3-6.4-16.9z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
-        background-repeat: no-repeat;
-        background-position: right 0.7em top 50%, 0 0;
-        background-size: 0.65em auto, 100%;
-        padding-right: 2.5em; /* Make space for the arrow */
-    }
-
-
-    .form-btn {
-        margin-top: 1.5rem;
-        padding: 0.6rem 1.5rem;
-        font-size: 1.1rem;
-        width: calc(100% - 2rem); /* Adjust width */
-        margin-left: 1rem; /* Center button */
-    }
-     .form-btn:hover{ /* Remove hover effect for mobile */
-        background-color: var(--secondary-color);
-        color: inherit; /* Keep original color */
-        transform: translateY(0);
-    }
-
-
-    /* --- Footer --- */
-    .footer-container {
-        flex-direction: column; /* Stack footer columns */
-        align-items: center; /* Center footer content */
-    }
-
-    .footer-col {
-        margin: 1rem 0; /* Space between stacked columns */
-        text-align: center; /* Center text */
-        flex: 1 1 100%; /* Take full width */
-    }
-
-    .footer-col h3 {
-        font-size: 16px;
-        margin-bottom: 10px;
-        display: inline-block; /* Keep underline centered */
-    }
-
-    .footer-col ul {
-        padding: 0;
-    }
-
-    .footer-col ul li {
-        margin-bottom: 8px;
-    }
-
-    .social-links {
-        margin-top: 10px;
-    }
-
-    .social-links a {
-        font-size: 18px;
-        margin: 0 8px;
-    }
-
-    .footer-bottom {
-        font-size: 12px;
-        margin-top: 15px;
-        padding-top: 8px;
-    }
+/* Base styles (from your original CSS) */
+.back-btn {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  margin-top: 1.6rem;
+  margin-left: 5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 5px black;
+}
+
+.back-btn:hover {
+  background-color: #ff4c4c;
+}
+
+.heading h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: orangered;
+}
+
+.heading p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(75, 74, 74);
+  text-transform: capitalize;
+}
+
+.stock-container {
+  margin-bottom: 5rem;
+}
+
+.stock-container ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  list-style: none;
+  /* height: 450px; Remove fixed height for responsiveness */
+}
+
+.stock {
+  padding: 6rem 2rem;
+}
+
+.stock-container li {
+  background: #fff;
+  padding: 0 1rem;
+  max-width: 350px;
+  box-shadow: 1px 2px 5px black;
+  border-radius: 4%;
+}
+
+.stock-container img {
+  height: 300px;
+  width: 300px;
+  opacity: 0.8;
+  transform: scale(1.13);
+}
+
+.stock-container img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stock-container h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: orangered;
+}
+
+.stock-container span {
+  font-size: 1.5rem;
+  color: orangered;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.stock-container h2 {
+  color: rgb(78, 75, 75);
+}
+
+.wishlist-btn {
+  background-color: rgb(185, 227, 253);
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  border-radius: 7px;
+  margin-bottom: 2rem;
+  border: 0px solid black;
+  box-shadow: 1px 2px 4px black;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  background-color: rgb(121, 221, 255);
+  transform: translateY(3px);
+}
+
+/* Responsive CSS for Mobile Screens */
+
+/* For screens up to 600px wide */
+@media (max-width: 600px) {
+  .back-btn {
+    margin-left: 1rem; /* Adjust margin for smaller screens */
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .heading h1 {
+    font-size: 2.2rem; /* Smaller heading for mobile */
+  }
+
+  .heading p {
+    font-size: 1.2rem;
+    padding: 0 1rem; /* Add some padding to prevent text from hitting edges */
+  }
+
+  .stock-container ul {
+    gap: 1.5rem; /* Reduce gap between items */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items when stacked */
+  }
+
+  .stock-container li {
+    max-width: 90%; /* Allow list items to take more width */
+    margin-bottom: 2rem; /* Add space between stacked items */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .stock-container img {
+    height: 250px; /* Slightly smaller images */
+    width: 250px;
+    transform: scale(1); /* Reset transform for smaller screens */
+  }
+
+  .stock-container img:hover {
+    transform: scale(1.05); /* Maintain hover effect */
+  }
+
+  .stock-container h3 {
+    font-size: 1.3rem;
+  }
+
+  .stock-container span {
+    font-size: 1.3rem;
+  }
+
+  .wishlist-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .stock {
+    padding: 3rem 1rem; /* Adjust padding for stock sections */
+  }
+}
+
+/* For screens up to 480px wide */
+@media (max-width: 480px) {
+  .back-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .heading p {
+    font-size: 1rem;
+  }
+
+  .stock-container ul {
+    gap: 1rem;
+  }
+
+  .stock-container li {
+    max-width: 95%; /* Even wider for very small screens */
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .stock-container img {
+    height: 200px; /* Further reduce image size */
+    width: 200px;
+  }
+
+  .stock-container h3,
+  .stock-container span {
+    font-size: 1.2rem;
+  }
+
+  .wishlist-btn {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .stock {
+    padding: 2rem 0.5rem;
+  }
 }

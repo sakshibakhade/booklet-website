@@ -1,0 +1,55 @@
+@media only screen and (max-width: 480px) {
+.stock-contain ul {
+    display: flex;
+    justify-content: center;
+   gap: 3rem;
+    flex-wrap: wrap;
+    list-style: none;
+    height: 450px;
+}
+.book-stock{
+   padding:6rem 2rem;
+}
+
+.stock-contain li {
+    background: #fff;
+    padding: 0 1rem;
+    max-width:350px;
+  box-shadow: 1px 2px 5px black;
+  border-radius: 4%;
+} 
+
+ .stock-contain img{
+    height: 300px;
+    width: 300px;
+    opacity: 0.8;
+    transform: scale(1.13);
+
+}
+ .stock-contain  img:hover{
+  opacity: 1;
+    transform: scale(1.05);
+}
+ 
+   li {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+ .stock-contain h3{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+      color:orangered;
+ }
+ .stock-contain  span{
+    font-size: 1.5rem;
+    color: orangered;
+    font-weight: bold;
+    margin-bottom: 1rem;
+   }
+    .stock-contain h2{
+    color: rgb(78, 75, 75);
+    }
+   
+}

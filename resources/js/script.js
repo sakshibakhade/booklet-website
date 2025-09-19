@@ -6,7 +6,7 @@
     
         window.location.href = "../index.html#books-stock";
     }
-    backbtn.addEventListener("click", backbtnfun);
+    backbtn.addEventListener('click', backbtnfun);
   
   
     
