@@ -1,55 +1,220 @@
-@media only screen and (max-width: 480px) {
-.stock-contain ul {
-    display: flex;
-    justify-content: center;
-   gap: 3rem;
-    flex-wrap: wrap;
-    list-style: none;
-    height: 450px;
-}
-.book-stock{
-   padding:6rem 2rem;
+/* Base styles (from your original CSS) */
+.back-btn {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  margin-top: 1.6rem;
+  margin-left: 5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 5px black;
 }
 
-.stock-contain li {
-    background: #fff;
-    padding: 0 1rem;
-    max-width:350px;
+.back-btn:hover {
+  background-color: #ff4c4c;
+}
+
+.heading h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: orangered;
+}
+
+.heading p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(75, 74, 74);
+  text-transform: capitalize;
+}
+
+.stock-container {
+  margin-bottom: 5rem;
+}
+
+.stock-container ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  list-style: none;
+  /* height: 450px; Remove fixed height for responsiveness */
+}
+
+.stock {
+  padding: 6rem 2rem;
+}
+
+.stock-container li {
+  background: #fff;
+  padding: 0 1rem;
+  max-width: 350px;
   box-shadow: 1px 2px 5px black;
   border-radius: 4%;
-} 
-
- .stock-contain img{
-    height: 300px;
-    width: 300px;
-    opacity: 0.8;
-    transform: scale(1.13);
-
 }
- .stock-contain  img:hover{
+
+.stock-container img {
+  height: 300px;
+  width: 300px;
+  opacity: 0.8;
+  transform: scale(1.13);
+}
+
+.stock-container img:hover {
   opacity: 1;
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
- 
-   li {
+
+li {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   text-align: center;
 }
- .stock-contain h3{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-      color:orangered;
- }
- .stock-contain  span{
-    font-size: 1.5rem;
-    color: orangered;
-    font-weight: bold;
-    margin-bottom: 1rem;
-   }
-    .stock-contain h2{
-    color: rgb(78, 75, 75);
-    }
-   
+
+.stock-container h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: orangered;
+}
+
+.stock-container span {
+  font-size: 1.5rem;
+  color: orangered;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.stock-container h2 {
+  color: rgb(78, 75, 75);
+}
+
+.wishlist-btn {
+  background-color: rgb(185, 227, 253);
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  border-radius: 7px;
+  margin-bottom: 2rem;
+  border: 0px solid black;
+  box-shadow: 1px 2px 4px black;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  background-color: rgb(121, 221, 255);
+  transform: translateY(3px);
+}
+
+/* Responsive CSS for Mobile Screens */
+
+/* For screens up to 600px wide */
+@media (max-width: 600px) {
+  .back-btn {
+    margin-left: 1rem; /* Adjust margin for smaller screens */
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .heading h1 {
+    font-size: 2.2rem; /* Smaller heading for mobile */
+  }
+
+  .heading p {
+    font-size: 1.2rem;
+    padding: 0 1rem; /* Add some padding to prevent text from hitting edges */
+  }
+
+  .stock-container ul {
+    gap: 1.5rem; /* Reduce gap between items */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items when stacked */
+  }
+
+  .stock-container li {
+    max-width: 90%; /* Allow list items to take more width */
+    margin-bottom: 2rem; /* Add space between stacked items */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .stock-container img {
+    height: 250px; /* Slightly smaller images */
+    width: 250px;
+    transform: scale(1); /* Reset transform for smaller screens */
+  }
+
+  .stock-container img:hover {
+    transform: scale(1.05); /* Maintain hover effect */
+  }
+
+  .stock-container h3 {
+    font-size: 1.3rem;
+  }
+
+  .stock-container span {
+    font-size: 1.3rem;
+  }
+
+  .wishlist-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .stock {
+    padding: 3rem 1rem; /* Adjust padding for stock sections */
+  }
+}
+
+/* For screens up to 480px wide */
+@media (max-width: 480px) {
+  .back-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .heading p {
+    font-size: 1rem;
+  }
+
+  .stock-container ul {
+    gap: 1rem;
+  }
+
+  .stock-container li {
+    max-width: 95%; /* Even wider for very small screens */
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .stock-container img {
+    height: 200px; /* Further reduce image size */
+    width: 200px;
+  }
+
+  .stock-container h3,
+  .stock-container span {
+    font-size: 1.2rem;
+  }
+
+  .wishlist-btn {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .stock {
+    padding: 2rem 0.5rem;
+  }
 }
