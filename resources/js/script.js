@@ -36,10 +36,11 @@ if (wishlistContainer) {
 
   wishlistItems.forEach((item) => {
     const removeBtn = document.createElement("button");
-    removeBtn.textContent = "❌ Remove";
+
     removeBtn.style.backgroundColor = "orange";
     removeBtn.style.color = "white";
     removeBtn.style.borderRadius = "5px";
+    // removeBtn.style.marginBottom = "3rem";
     removeBtn.style.padding = "0.5rem 1rem";
       removeBtn.classList.add("remove-btn");
       removeBtn.classList.add("remove-btn");

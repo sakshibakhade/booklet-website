@@ -137,12 +137,14 @@ li {
     gap: 1.5rem; /* Reduce gap between items */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items when stacked */
+    margin-bottom: 5rem;
   }
 
   .stock-container li {
     max-width: 90%; /* Allow list items to take more width */
     margin-bottom: 2rem; /* Add space between stacked items */
     padding: 1rem; /* Adjust padding */
+        margin-bottom: 5rem;
   }
 
   .stock-container img {
@@ -197,6 +199,7 @@ li {
     max-width: 95%; /* Even wider for very small screens */
     margin-bottom: 1.5rem;
     padding: 0.8rem;
+        margin-bottom: 5rem;
   }
 
   .stock-container img {
