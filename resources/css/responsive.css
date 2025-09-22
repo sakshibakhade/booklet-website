@@ -28,12 +28,52 @@
         background-position: 80% center; /* Adjust background image position */
     }
 
-    .nav {
-        flex-direction: column; /* Stack logo/title and links */
-        align-items: center; /* Center items horizontally */
-        padding: 1rem 0;
-    }
+    
+ 
+  /* Hero */
+   
+.nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+  }
 
+  .nav .links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 200px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+
+  .nav .links.show {
+    display: flex;
+  }
+
+  .nav .links a {
+    padding: 10px;
+    color: #333; /* readable on white */
+    text-decoration: none;
+  }
+
+ .menu-icon {
+  display: block;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+     
     .nav img {
         position: static; /* Remove absolute positioning */
         float: none; /* Remove float */
@@ -43,16 +83,16 @@
     }
 
     .nav .image {
-        margin-top: 0.5rem; /* Adjust margin for title image */
+        margin-top: 4rem; /* Adjust margin for title image */
         height: 20px;
         width: 80px;
     }
-
-    .links {
-        display: none; /* Hide desktop navigation for mobile */
-        /* You would typically implement a "hamburger menu" here with JavaScript */
-    }
-
+    .nav .links a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
     .heading {
         position: static; /* Remove absolute positioning */
         text-align: center;
@@ -467,4 +507,17 @@
         margin-top: 15px;
         padding-top: 8px;
     }
+}
+
+ @media only screen and (min-width: 481px) {
+  .menu-icon {
+    display: none; /* hide hamburger on big screen */
+  }
+  .nav .links {
+    display: flex !important; /* always visible on desktop */
+    position: static;
+    flex-direction: row;
+    box-shadow: none;
+    background: none;
+  }
 }

@@ -81,6 +81,13 @@ transition: backgroundcolor 0.3s ease ;
     color: black;
 }
 
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .nav img{
     position: relative;
     left: 5rem;
@@ -94,6 +101,7 @@ transition: backgroundcolor 0.3s ease ;
     width: 100px;
     margin-top: 4.5rem;
     border-radius: 3px;
+    margin-right: 20rem;
 }
 .links{
     display: flex;
