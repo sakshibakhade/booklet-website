@@ -28,52 +28,45 @@
         background-position: 80% center; /* Adjust background image position */
     }
 
-    
- 
-  /* Hero */
-   
-.nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 1rem;
-  }
+    .nav {
+        position: relative; /* Make header a reference for absolute menu */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: rgb(194, 17, 17);
+    }
 
-  .nav .links {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 70px;
-    right: 10px;
-    width: 200px;
-    padding: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    border-radius: 10px;
-  }
+    .menu-btn {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
 
-  .nav .links.show {
-    display: flex;
-  }
+    .nav .links {
+        display: none;                
+        flex-direction: column;       
+        position: absolute;           
+        top: 100%;                    
+        left: 0;                      
+        width: 100%;                  
+        background-color: #333;
+        z-index: 1000;                
+    }
 
-  .nav .links a {
-    padding: 10px;
-    color: #333; /* readable on white */
-    text-decoration: none;
-  }
+    .nav .links a {
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        border-top: 1px solid #444; 
+    }
 
- .menu-icon {
-  display: block;
-  font-size: 28px;
-  cursor: pointer;
-  color: #333;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
+    .nav .links.active {
+        display: flex; 
+    }
 
-     
+
     .nav img {
         position: static; /* Remove absolute positioning */
         float: none; /* Remove float */
@@ -507,17 +500,4 @@
         margin-top: 15px;
         padding-top: 8px;
     }
-}
-
- @media only screen and (min-width: 481px) {
-  .menu-icon {
-    display: none; /* hide hamburger on big screen */
-  }
-  .nav .links {
-    display: flex !important; /* always visible on desktop */
-    position: static;
-    flex-direction: row;
-    box-shadow: none;
-    background: none;
-  }
 }

@@ -81,7 +81,32 @@ transition: backgroundcolor 0.3s ease ;
     color: black;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #ff5722;
+  color: white;
+}
 
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Nav links (desktop default) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
 .nav {
   display: flex;
   justify-content: space-around;
