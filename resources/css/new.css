@@ -32,11 +32,6 @@
    color: rgb(75, 74, 74);
    text-transform:capitalize;
 }
- .stock-container{
-   margin-bottom:10rem;
-
- 
-}
  
  
 .stock-container ul {
@@ -48,7 +43,7 @@
     height: 450px;
 }
 .stock{
-   padding:6rem 2rem;
+   padding:3rem 2rem;
 }
 
 .stock-container li {
@@ -93,6 +88,28 @@
     color: rgb(78, 75, 75);
     }
    
+    /* Wishlist Container */
+#wishlist-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center items */
+  gap: 20px; /* space between items */
+  margin: 30px auto; /* space from page border */
+  padding: 10px;
+  max-width: 1200px; /* keeps layout neat */
+}
+
+/* Book Item */
+#wishlist-items li {
+  list-style: none;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px ;
+  text-align: center;
+  background: #fff;
+ 
+}
+
 .wishlist-btn {
   background-color:rgb(185, 227, 253);
   color: black;
