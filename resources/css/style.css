@@ -99,7 +99,7 @@ transition: backgroundcolor 0.3s ease ;
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+
 }
 
 .nav-links li a {
@@ -135,7 +135,7 @@ transition: backgroundcolor 0.3s ease ;
 
 }
 .links li{
-    padding: 4rem 4rem;
+    padding: 4rem 3rem;
 
 }
 .links a:link,

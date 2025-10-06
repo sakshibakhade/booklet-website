@@ -18,19 +18,20 @@
   background-color: #ff4c4c;
 }
 
-.stock-heading h1{
-   text-align: center;
-   font-size: 3rem;
-   font-weight: 100;
-   letter-spacing:0.1rem;
-   text-transform: uppercase;
-   color: orangered;
+h1{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color:orangered;
+  text-transform:uppercase;
+
 }
-.stock-heading p{
-   text-align: center;
-   font-size: 1.5rem;
-   color: rgb(75, 74, 74);
-   text-transform:capitalize;
+p{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.7rem;
+
 }
  
  
@@ -41,6 +42,7 @@
     flex-wrap: wrap;
     list-style: none;
     height: 450px;
+    margin-bottom: 3rem;
 }
 .stock{
    padding:3rem 2rem;

@@ -71,14 +71,14 @@ if (backbtn) {
     window.location.href = "../index.html#books-stock";
   });
 }
-// Toggle menu on mobile
 document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.querySelector(".menu-btn"); // Hamburger button
-  const navLinks = document.querySelector(".nav .links"); // Your nav links container
+  const menuBtn = document.querySelector(".menu-btn");
+  const navLinks = document.querySelector(".nav .links");
 
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active"); // Toggle the "active" class
-  });
+  if (menuBtn && navLinks) {
+    // ensure elements exist
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
 });
-
-

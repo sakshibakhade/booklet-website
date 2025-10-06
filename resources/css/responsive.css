@@ -29,43 +29,42 @@
     }
 
     .nav {
-        position: relative; /* Make header a reference for absolute menu */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color:orangered;
-        color: rgb(225, 219, 219);
-    }
+    position: relative;
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+  }
 
-    .menu-btn {
-        display:block;
-        left: 7rem;
-        font-size: 24px;
-        cursor: pointer;
-    }
+  .menu-btn {
+    display: block;
+    font-size: 1.7rem;
+    color: white;
+  }
 
-    .nav .links {
-        display: none;                
-        flex-direction: column;       
-        position: absolute;           
-        top: 100%;                    
-        left: 0;                      
-        width: 100%;                  
-        background-color: #333;
-        z-index: 1000;                
-    }
+  .links {
+    display: none;                  /* Hide menu initially */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;                      /* Below nav */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: #BBFBFF;
+    z-index: 1000;
+  }
 
-    .nav .links a {
-        padding: 10px 20px;
-        color: white;
-        text-decoration: none;
-        border-top: 1px solid #444; 
-    }
+  .links li {
+    padding: 1rem 2rem;
+  }
 
-    .nav .links.active {
-        display: flex; 
-    }
+  .links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+
+  .links.active {
+    display: flex;                  /* Show menu when active */
+  }
 
 
     .nav img {
@@ -85,7 +84,7 @@
     }
     .nav .links a {
     padding: 10px;
-    color: white;
+    color: black;
     text-decoration: none;
   }
   
@@ -261,7 +260,7 @@
     }
 
     .stock-container ul {
-        flex-direction: column; /* Stack book items vertically */
+        flex-direction:column; /* Stack book items vertically */
         height: auto; /* Auto height for stacked items */
         gap: 1.5rem;
         margin: 1rem 0;
