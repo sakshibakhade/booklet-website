@@ -12,4 +12,20 @@ margin-left: 2rem;
 font-size: 1rem;
 padding: 0.4rem 0.4rem;
 }
+.stock img{
+  width: 260px;
+}
+#wishlist-items ul {
+display: grid;
+grid-template-columns: repeat(1,300px);
+gap: 80rem;
+padding: 0 2rem;
+box-shadow: 1px 1px 12px black;
+}
+.stock-container{
+padding: 0 10rem;
+padding-right:16rem;
+
+
+}
 }
